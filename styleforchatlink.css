@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* 헤더 스타일링 */
+header {
+    width: 100%;
+    max-width: 600px;
+    /* 본문의 최대 가로 폭에 맞춤 */
+    margin: 0 auto;
+    /* 상단과 하단의 마진 없이 좌우 마진으로 중앙 정렬 */
+    padding: 10px 20px;
+    /* 적절한 내부 패딩 */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+    /* 상단 모서리 둥글게 */
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    /* 좌측과 우측 네비게이션을 양 끝으로 정렬 */
+    width: 100%;
+    max-width: 600px;
+    /* 최대 가로 폭 설정 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+}
+
+.left-nav,
+.right-nav {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav li {
+    background-color: #f8fbff;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.header-nav li:first-child {
+    margin-left: 0;
+}
+
+.header-nav li:last-child {
+    margin-right: 0;
+}
+
+.header-nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.header-nav img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/*header에 대한 내용들 끝  */
+
+.sub-header {
+    width: 100%;
+    max-width: 600px;
+    /* 첫 번째 헤더와 동일한 최대 가로 폭 */
+    margin: 20px auto;
+    /* 상단 및 하단 여백 포함 중앙 정렬 */
+    padding: 10px 20px;
+    /* 내부 패딩 */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 그림자 효과 */
+    border-radius: 10px;
+    /* 모서리 둥글게 처리 */
+}
+
+.sub-header-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    /* 항목들을 세로 중앙에 정렬 */
+}
+
+.sub-header-nav .drug-summary-link {
+    background-color: #fff;
+    /* "약물 용량 요약" 배경색 */
+}
+
+.sub-header-nav .drug-organization-link {
+       background-color: #fff; /* "약물 정리" 배경색 */
+}
+
+.sub-header-nav .chat-link {
+    background-image: linear-gradient(to right, #2575fc 0%, #6a11cb 100%);
+  }
+  
+
+.sub-header-nav li a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #000000;
+    /* 모든 링크의 텍스트 색상을 흰색으로 변경 */
+    font-size: 16px;
+}
+
+/* 위 까지가 공통적으로 사용하는 헤더에 대한 내용 */

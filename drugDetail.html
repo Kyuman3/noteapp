@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Detail</title>
+    <link rel="stylesheet" href="stylefordrugDetail.css">
+</head>
+
+<div id="header-placeholder"></div>
+
+<body>
+
+    <div id="drugDetails" class="drug-details"></div>
+    <div id="anesthesiaInfoContainer" class="anesthesia-info-container"></div>
+    <div id="notesContainer" class="notes-container"></div>
+
+
+    <div id="anesthesiaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enter Anesthesia Information</h2>
+            <form id="anesthesiaForm">
+                <label for="inductionInhalation">Induction dose for inhalation anesthesia:</label>
+                <input type="text" id="inductionInhalation" name="inductionInhalation"
+                    placeholder="Enter induction dose">
+
+                <label for="maintenanceInhalation">Maintenance dose for inhalation anesthesia:</label>
+                <input type="text" id="maintenanceInhalation" name="maintenanceInhalation"
+                    placeholder="Enter maintenance dose">
+
+                <label for="inductionIV">Induction dose for intravenous anesthesia:</label>
+                <input type="text" id="inductionIV" name="inductionIV" placeholder="Enter induction dose">
+
+                <label for="maintenanceIV">Maintenance dose for intravenous anesthesia:</label>
+                <input type="text" id="maintenanceIV" name="maintenanceIV" placeholder="Enter maintenance dose">
+
+                <label for="inductionMAC">Induction dose for MAC anesthesia:</label>
+                <input type="text" id="inductionMAC" name="inductionMAC" placeholder="Enter induction dose">
+
+                <label for="maintenanceMAC">Maintenance dose for MAC anesthesia:</label>
+                <input type="text" id="maintenanceMAC" name="maintenanceMAC" placeholder="Enter maintenance dose">
+
+                <label for="freeText">Free text (notes):</label>
+                <textarea id="freeText" name="freeText" placeholder="Enter any additional information"></textarea>
+
+                <label for="imageUpload">Upload image:</label>
+                <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Note Adding Modal -->
+<div id="noteModal" class="modal">
+    <div class="modal-content">
+        <input type="hidden" id="drugId" name="drugId" value="YourDrugIdHere">
+
+        <span class="close">&times;</span>
+        <h2>Add Drug Note</h2>
+        <form id="noteForm">
+            <textarea id="drugNote" name="drugNote" placeholder="Enter your note here" rows="4"></textarea>
+            <input type="hidden" id="drugId" name="drugId">  <!-- Hidden field for storing drugId -->
+            <button type="button" onclick="submitDrugNote()">Submit Note</button>
+        </form>
+    </div>
+</div>
+
+
+    <div class="actionFab" onclick="actionToggle();">
+        <span>+</span>
+        <ul>
+            <li><a id="show-anesthesia-modal" class="btn-floating red"><img src="1.png"> 약물 기본 내용 추가</a></li>
+            <li><img src="2.png"> 약물 노트 추가 </li>
+        </ul>
+    </div>
+ 
+    <script src="scriptfordrugDetail.js"></script>
+</body>
+
+
+</html>

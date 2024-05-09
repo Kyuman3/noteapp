@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Dose</title>
+    <link rel="stylesheet" href="stylefordrug_organization.css">
+</head>
+
+
+<div id="header-placeholder"></div>
+
+<!-- header 내용  -->
+
+<body>
+
+    <div id="fab" class="fab">+</div>
+
+    <div id="inputModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="drugName" placeholder="약물 이름">
+            <input type="text" id="drugConcentration" placeholder="약물 농도 (mg/ml)">
+            <button type="button" onclick="addDrug()">추가</button>
+        </div>
+    </div>
+    <!-- Edit Drug Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Drug Information</h2>
+            <div>
+                <label for="editDrugName">Drug Name:</label>
+                <input type="text" id="editDrugName" name="editDrugName" placeholder="Enter drug name">
+
+                <label for="editDrugConcentration">Drug Concentration (mg/ml):</label>
+                <input type="text" id="editDrugConcentration" name="editDrugConcentration"
+                    placeholder="Enter drug concentration">
+            </div>
+            <button type="button" onclick="updateDrug()" class="submit-btn">Update Drug</button>
+            <button type="button" onclick="deleteDrug()" class="delete-button">Delete Drug</button>
+        </div>
+    </div>
+
+
+
+    <!-- 입력된 약물 이름을 표시할 컨테이너 -->
+    <div id="drugsContainer" class="drugs-container">
+    </div>
+
+    <script src="scriptfordrugorganization.js"></script>
+</body>

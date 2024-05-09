@@ -1,0 +1,313 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* 헤더 스타일링 */
+header {
+    width: 100%;
+    max-width: 600px;
+    /* 본문의 최대 가로 폭에 맞춤 */
+    margin: 0 auto;
+    /* 상단과 하단의 마진 없이 좌우 마진으로 중앙 정렬 */
+    padding: 10px 20px;
+    /* 적절한 내부 패딩 */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+    /* 상단 모서리 둥글게 */
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    /* 좌측과 우측 네비게이션을 양 끝으로 정렬 */
+    width: 100%;
+    max-width: 600px;
+    /* 최대 가로 폭 설정 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+}
+
+.left-nav,
+.right-nav {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav li {
+    background-color: #f8fbff;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.header-nav li:first-child {
+    margin-left: 0;
+}
+
+.header-nav li:last-child {
+    margin-right: 0;
+}
+
+.header-nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.header-nav img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/*header에 대한 내용들 끝  */
+
+.sub-header {
+    width: 100%;
+    max-width: 600px;
+    /* 첫 번째 헤더와 동일한 최대 가로 폭 */
+    margin: 20px auto;
+    /* 상단 및 하단 여백 포함 중앙 정렬 */
+    padding: 10px 20px;
+    /* 내부 패딩 */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 그림자 효과 */
+    border-radius: 10px;
+    /* 모서리 둥글게 처리 */
+}
+
+.sub-header-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    /* 항목들을 세로 중앙에 정렬 */
+}
+
+.sub-header-nav .drug-summary-link {
+    background-color: #fff;
+    /* "약물 용량 요약" 배경색 */
+}
+
+.sub-header-nav .drug-organization-link {
+    background-image: linear-gradient(to right, #2575fc 0%, #6a11cb 100%);
+    /* "약물 정리" 배경색 */
+}
+
+.sub-header-nav .chat-link {
+    background-color: #fff; /* "약물 정리" 배경색 */
+  }
+  
+
+
+.sub-header-nav li a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #000000;
+    /* 모든 링크의 텍스트 색상을 흰색으로 변경 */
+    font-size: 16px;
+}
+
+/* 위 까지가 공통적으로 사용하는 헤더에 대한 내용 */
+
+.fab {
+    position: fixed;
+    right: 430px;
+    bottom: 100px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    /* 버튼 내의 '+' 가운데 정렬 */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+header,
+.drugs-container {
+    max-width: 600px;
+    /* 예: header의 최대 폭 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+}
+
+/* FAB 스타일 */
+.fab {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Ensure the drugs-container itself does not extend beyond the header's max-width */
+.drugs-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next row */
+    justify-content: flex-start; /* Align items to start of container for consistent spacing */
+    align-items: flex-start; /* Align items at the start of the container */
+    max-width: 600px; /* Match the header's max width */
+    margin: 20px auto; /* Center the container with automatic horizontal margins */
+    padding: 10px; /* Adds some space inside the container */
+    gap: 10px; /* Provide space between items */
+}
+
+/* Adjustments for each drug item */
+.drug-item {
+    position: relative;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px; /* Adjusted size */
+}
+
+.drug-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Updated selector for edit button */
+.drug-item .drug-edit-button {
+    padding: 3px 6px;
+    font-size: 12px;
+    border-radius: 3px;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Updated selector for all buttons within drug-item if needed */
+.drug-item .button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.drug-item .button:hover {
+    background-image: linear-gradient(to right, #2575fc 0%, #6a11cb 100%);
+}
+
+
+
+/* 모달 기본 스타일 */
+.modal-content {
+    margin: auto;
+    /* 자동 마진으로 중앙 정렬 */
+    position: relative;
+    /* 상대적 위치 지정 */
+    top: 50px;
+    /* 모달 상단 여백 조정, 필요에 따라 조절 */
+    max-width: 600px;
+    /* header와 동일한 최대 폭 */
+    width: 90%;
+    /* 화면 크기에 따라 조정될 너비의 비율 */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+    border-radius: 15px;
+    /* Rounded corners */
+    padding: 25px;
+    /* More padding for a spacious layout */
+}
+
+/* 모달 배경 스타일 */
+.modal {
+    display: none;
+    /* 처음에는 숨김 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Semi-transparent white */
+}
+
+/* Style for input fields */
+input[type="text"] {
+    width: calc(100% - 20px);
+    /* Full width with padding adjustment */
+    padding: 12px;
+    /* Spacious padding for inputs */
+    margin-bottom: 15px;
+    /* Space between input fields */
+    border: 1px solid #ddd;
+    /* Subtle border */
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    box-sizing: border-box;
+    /* Include padding and border in the input's dimension */
+}
+
+/* Style for primary action button */
+button {
+    background-color: #007bff;
+    /* Standout color for the primary button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    /* Rounded corners */
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Soft shadow for depth */
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* A darker shade for hover state */
+}
+
+
+/* 닫기 버튼 스타일 */
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #707070;
+    /* Subtle color for the close button */
+    margin-left: auto;
+    /* Positions the close button to the right */
+    padding: 10px;
+    /* Makes it easier to tap on touch devices */
+}
+
+/* drug link 스타일*/
+
+.drug-link {
+    text-decoration: none;
+    color: inherit;
+}

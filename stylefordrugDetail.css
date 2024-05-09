@@ -1,0 +1,446 @@
+body {
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    /* Ensures relative positioning for absolute children */
+    min-height: 100vh;
+    /* Full viewport height */
+    margin: 0;
+    padding-bottom: 100px;
+    /* Extra space for FAB */
+}
+
+/* 헤더 스타일링 */
+
+header,
+.sub-header,
+.drug-details,
+.anesthesia-info-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    /* 좌측과 우측 네비게이션을 양 끝으로 정렬 */
+    width: 100%;
+    max-width: 600px;
+    /* 최대 가로 폭 설정 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+}
+
+.left-nav,
+.right-nav {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav li {
+    background-color: #f8fbff;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.header-nav li:first-child {
+    margin-left: 0;
+}
+
+.header-nav li:last-child {
+    margin-right: 0;
+}
+
+.header-nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.header-nav img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/*header에 대한 내용들 끝  */
+
+.sub-header {
+    width: 100%;
+    max-width: 600px;
+    /* 첫 번째 헤더와 동일한 최대 가로 폭 */
+    margin: 20px auto;
+    /* 상단 및 하단 여백 포함 중앙 정렬 */
+    padding: 10px 20px;
+    /* 내부 패딩 */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 그림자 효과 */
+    border-radius: 10px;
+    /* 모서리 둥글게 처리 */
+}
+
+.sub-header-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    /* 항목들을 세로 중앙에 정렬 */
+}
+
+.sub-header-nav .drug-summary-link {
+    background-color: #fff;
+    /* "약물 용량 요약" 배경색 */
+}
+
+.sub-header-nav .drug-organization-link {
+    background-image: linear-gradient(to right, #2575fc 0%, #6a11cb 100%);
+    /* "약물 정리" 배경색 */
+}
+
+.sub-header-nav .chat-link {
+    background-color: #fff; /* "약물 정리" 배경색 */
+  }
+  
+
+.sub-header-nav li a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #000000;
+    /* 모든 링크의 텍스트 색상을 흰색으로 변경 */
+    font-size: 16px;
+}
+
+/* 위 까지가 공통적으로 사용하는 헤더에 대한 내용 */
+
+
+/* Styling for the drug details to align with the subheader */
+.drug-details {
+    width: 100%;
+    max-width: 600px;
+    /* Ensures that the drug details do not exceed the header width */
+    background-color: #fff;
+    /* Matches the header color */
+    padding: 20px;
+    margin: 20px auto;
+    /* Provides top margin for spacing and auto for horizontal centering */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    /* Centers the text within the drug details section */
+    font-size: 24px;
+    /* Larger font size for emphasis */
+    color: #333;
+    /* Dark grey color for text for better readability */
+}
+
+.drug-details h1 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    color: #333;
+}
+
+/* 모달 입력칸 관련 내용들. */
+/* The Modal (background) */
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Input field styles */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+/* Submit button styles */
+.submit-btn {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Drug Details styles */
+.drug-details {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.drug-details h1 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+/* Anesthesia info에 대한 css*/
+/* Ensures consistency with the header */
+.anesthesia-info-container {
+    width: 100%;
+    max-width: 600px;
+    /* Match the header's max-width */
+    margin: 20px auto;
+    /* Aligns center just like the header */
+    padding: 00px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.anesthesia-info {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.anesthesia-info p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.anesthesia-info:first-child {
+    margin-top: 0;
+}
+
+.anesthesia-info:last-child {
+    margin-bottom: 0;
+}
+
+
+/* testtest */
+
+.actionFab {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.actionFab span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    font-size: 2em;
+    transition: 0.3s ease-in-out
+}
+
+.actionFab.active span {
+    transform: rotate(135deg);
+}
+
+.actionFab ul {
+    position: absolute;
+    bottom: 55px;
+    background: #fff;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+}
+
+.actionFab.active ul {
+    bottom: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+
+}
+
+.actionFab ul li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.actionFab ul li:hover {
+    font-weight: 600;
+}
+
+
+.actionFab ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.actionFab ul li img {
+    margin-right: 10px;
+    opacity: 0.2;
+    transform: scale(0.6);
+}
+
+.actionFab ul li:hover img {
+    opacity: 0.8;
+}
+
+/* Styles for the notes container */
+.notes-container {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual note items */
+.note-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.note-item p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Buttons for edit and delete actions */
+.note-item .edit-button,
+.note-item .delete-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+}
+
+.note-item .edit-button {
+    right: 80px;
+    background-color: #f0ad4e; /* Bootstrap warning color */
+    color: white;
+}
+
+.note-item .delete-button {
+    right: 10px;
+    background-color: #d9534f; /* Bootstrap danger color */
+    color: white;
+}
+
+.note-item .edit-button:hover,
+.note-item .delete-button:hover {
+    opacity: 0.8;
+}
+
+/* Hover effects for note items */
+.note-item:hover {
+    background-color: #eef;
+}
+
+/* Styling for the form within the modal for consistency */
+#noteModal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Close button styling inside modal */
+#noteModal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#noteModal .close:hover,
+#noteModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drug Dose</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<div id="header-placeholder"></div>
+
+<body>
+  <div class="container">
+    <div class="input-group">
+      <label for="weight"> Weight (kg): </label>
+      <input type="number" id="weight" placeholder=" ">
+    </div>
+    <div class="tiles">
+      <!-- tiles -->
+      <div class="tile" onclick="openEditModal('NorepiEpi')">Norepi/Epi<div>DD: <span id="ddNorepiEpi">0.01</span></div>
+        <div>Con: <span id="conNorepiEpi">10</span></div>
+        <div><strong id="resultNorepiEpi"></strong></div>
+      </div>
+      <div class="tile" onclick="openEditModal('Dobutamine')">Dobutamine<div>DD: <span id="ddDobutamine">5</span></div>
+        <div>Con: <span id="conDobutamine">2</span></div>
+        <div><strong id="resultDobutamine"></strong></div>
+      </div>
+      <div class="tile" onclick="openEditModal('Nitroglycerine')">Nitroglycerine<div>DD: <span
+            id="ddNitroglycerine">1</span></div>
+        <div>Con: <span id="conNitroglycerine">0.25</span></div>
+        <div><strong id="resultNitroglycerine"></strong></div>
+      </div>
+      <div class="tile" onclick="openEditModal('Phenylephrine')">Phenylephrine<div>DD: <span
+            id="ddPhenylephrine">0.1</span></div>
+        <div>Con: <span id="conPhenylephrine">100</span></div>
+        <div><strong id="resultPhenylephrine"></strong></div>
+      </div>
+      <div class="tile" onclick="openEditModal('Dopamine')">Dopamine<div>DD: <span id="ddDopamine">5</span></div>
+        <div>Con: <span id="conDopamine">2</span></div>
+        <div><strong id="resultDopamine"></strong></div>
+      </div>
+      <div class="tile" onclick="openEditModal('Vasopressin')">Vasopressin<div>DD: <span id="ddVasopressin">0.01</span>
+        </div>
+        <div>Con: <span id="conVasopressin">0.2</span></div>
+        <div><strong id="resultVasopressin"></strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- tiles -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Edit DD and Con</h2>
+      <input type="hidden" id="currentDrugId">
+      <label for="modalDD">DD:</label>
+      <input type="text" id="modalDD" name="modalDD"><br>
+      <label for="modalCon">Con:</label>
+      <input type="text" id="modalCon" name="modalCon"><br>
+      <button onclick="saveChanges()">save</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+<!-- https://supportcenter.devexpress.com/ticket/details/t973642/devextreme-floating-action-button-multiple-actions-getting-started -->
